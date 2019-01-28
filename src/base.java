@@ -17,14 +17,14 @@ public class base {
 	AndroidDriver<AndroidElement>  driver;
 
 		// TODO Auto-generated method stub
-	 File appDir = new File("src");
-     File app = new File(appDir, "ApiDemos-debug.apk");
-     DesiredCapabilities capabilities = new DesiredCapabilities();
+            File appDir = new File("src");
+            File app = new File(appDir, "ApiDemos-debug.apk");
+            DesiredCapabilities capabilities = new DesiredCapabilities();
      
-    capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Rahulemulator");
-    capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-    driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Demo");
+            capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	    return driver;
 	}
 	
