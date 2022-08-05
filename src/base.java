@@ -21,7 +21,7 @@ public class base {
             File app = new File(appDir, "ApiDemos-debug.apk");
             DesiredCapabilities capabilities = new DesiredCapabilities();
      
-            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Demo");
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Demos" +
             capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
             driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
